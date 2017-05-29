@@ -773,7 +773,6 @@
 				"bottom": null,
 				"width": 375,
 				"height": 60,
-				"name": "inputField",
 				"parent": "flMiddle",
 				"visibility": true,
 				"touchEnabled": true,

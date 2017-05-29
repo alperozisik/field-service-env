@@ -86,7 +86,6 @@ const PgLogin_ = extend(Page)(
 		var flexlayout4 = new InputField(getCombinedStyle(".flexLayout", {
 			width: 375,
 			height: 60,
-			name: "inputField",
 			visible: true,
 			alignSelf: FlexLayout.AlignSelf.AUTO,
 			direction: FlexLayout.Direction.INHERIT,

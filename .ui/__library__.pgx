@@ -1,0 +1,309 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "f56d2414",
+			"themeProps": {},
+			"userProps": {},
+			"className": ".page",
+			"version": "6.3.0-rc.2",
+			"props": {
+				"width": 187.5,
+				"height": 301.5,
+				"children": [
+					"statusBar",
+					"headerBar",
+					"inputField"
+				],
+				"name": "__library__",
+				"flexProps": {
+					"alignContent": "STRETCH",
+					"alignItems": "STRETCH",
+					"direction": "INHERIT",
+					"flexDirection": "COLUMN",
+					"flexWrap": "NOWRAP",
+					"justifyContent": "FLEX_START"
+				},
+				"style": {
+					"backgroundColor": "#EEEEEE",
+					"font": {}
+				},
+				"isRemovable": false,
+				"layout": {
+					"width": 93.75,
+					"height": 150.75
+				},
+				"flex": {},
+				"orientation": "PORTRAIT",
+				"theme": "Defaults"
+			}
+		},
+		{
+			"type": "StatusBar",
+			"id": "4daf698c",
+			"themeProps": {},
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"height": 20,
+				"children": [],
+				"name": "statusBar",
+				"parent": "__library__",
+				"flexProps": {},
+				"style": {
+					"font": {}
+				},
+				"isRemovable": false,
+				"layout": {
+					"height": 10
+				},
+				"flex": {},
+				"visibility": true,
+				"color": "#00A1F1"
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "7574187d",
+			"themeProps": {},
+			"userProps": {},
+			"className": ".headerBar",
+			"props": {
+				"height": 44,
+				"children": [],
+				"title": "title",
+				"titleColor": "#000000",
+				"name": "headerBar",
+				"parent": "__library__",
+				"flexProps": {},
+				"style": {
+					"backgroundColor": "#FFFFFF",
+					"font": {}
+				},
+				"isRemovable": false,
+				"layout": {
+					"height": 22
+				},
+				"flex": {},
+				"visibility": true
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "9184d859",
+			"source": {
+				"page": "__library__"
+			},
+			"themeProps": {},
+			"userProps": {
+				"left": 0,
+				"top": 0,
+				"width": 375,
+				"height": 60,
+				"right": null,
+				"bottom": null,
+				"flexProps": {
+					"right": 0,
+					"positionType": "RELATIVE"
+				},
+				"style": {
+					"backgroundColor": "rgba( 255, 255, 255, 0 )"
+				},
+				"flex": {
+					"positionType": 0
+				}
+			},
+			"className": ".flexLayout",
+			"props": {
+				"left": 0,
+				"top": 0,
+				"right": null,
+				"bottom": null,
+				"width": 375,
+				"height": 60,
+				"children": [
+					"tbInput",
+					"imgLine"
+				],
+				"name": "inputField",
+				"parent": "__library__",
+				"flexProps": {
+					"alignSelf": "AUTO",
+					"direction": "INHERIT",
+					"alignContent": "STRETCH",
+					"alignItems": "STRETCH",
+					"justifyContent": "FLEX_START",
+					"flexWrap": "NOWRAP",
+					"flexDirection": "COLUMN",
+					"positionType": "ABSOLUTE",
+					"right": 0
+				},
+				"style": {
+					"backgroundColor": "rgba( 255, 255, 255, 0 )",
+					"opacity": 1,
+					"borderColor": "rgba(0,0,0,1)",
+					"borderWidth": 0,
+					"font": {}
+				},
+				"layout": {
+					"right": 0,
+					"left": 0,
+					"top": 0,
+					"width": 187.5,
+					"height": 30
+				},
+				"flex": {
+					"alignSelf": 0,
+					"direction": 0,
+					"alignContent": 4,
+					"alignItems": 4,
+					"justifyContent": 0,
+					"flexWrap": 0,
+					"flexDirection": 0,
+					"positionType": 1
+				},
+				"visibility": true
+			}
+		},
+		{
+			"type": "TextBox",
+			"id": "17ea7df0",
+			"source": {
+				"page": "__library__"
+			},
+			"themeProps": {},
+			"userProps": {
+				"left": 0,
+				"top": 0,
+				"width": 375,
+				"height": 60,
+				"text": "Input",
+				"usePageVariable": true,
+				"flexProps": {
+					"right": 0,
+					"bottom": 0,
+					"positionType": "ABSOLUTE"
+				},
+				"flex": {
+					"positionType": 1
+				},
+				"style": {
+					"backgroundColor": "rgba( 255, 255, 255, 0 )",
+					"font": {
+						"family": "Arial",
+						"size": 32
+					}
+				}
+			},
+			"className": ".textBox",
+			"props": {
+				"left": 0,
+				"top": 0,
+				"width": 375,
+				"height": 60,
+				"children": [],
+				"usePageVariable": true,
+				"name": "tbInput",
+				"parent": "inputField",
+				"flexProps": {
+					"alignSelf": "AUTO",
+					"positionType": "ABSOLUTE",
+					"right": 0,
+					"bottom": 0
+				},
+				"style": {
+					"backgroundColor": "rgba( 255, 255, 255, 0 )",
+					"opacity": 1,
+					"borderColor": "rgba(0,0,0,1)",
+					"borderWidth": 0,
+					"color": "rgba(0,0,0,1)",
+					"textAlignment": "MIDLEFT",
+					"font": {
+						"size": 32,
+						"bold": false,
+						"color": "rgba(0,0,0,1)",
+						"italic": false,
+						"family": "Arial"
+					}
+				},
+				"layout": {
+					"right": 0,
+					"bottom": 0,
+					"left": 0,
+					"top": 0,
+					"width": 187.5,
+					"height": 30
+				},
+				"flex": {
+					"alignSelf": 0,
+					"positionType": 1
+				},
+				"visibility": true,
+				"text": "Input"
+			}
+		},
+		{
+			"type": "ImageView",
+			"id": "ade89c0d",
+			"source": {
+				"page": "__library__"
+			},
+			"themeProps": {},
+			"userProps": {
+				"width": null,
+				"height": 2,
+				"left": 0,
+				"image": "input_active_line.png",
+				"imageFillType": "STRETCH",
+				"usePageVariable": true,
+				"flexProps": {
+					"positionType": "ABSOLUTE",
+					"right": 0,
+					"bottom": 0
+				},
+				"flex": {
+					"positionType": 1
+				},
+				"style": {
+					"backgroundColor": "rgba( 255, 255, 255, 0 )"
+				}
+			},
+			"className": ".imageView",
+			"props": {
+				"left": 0,
+				"width": null,
+				"height": 2,
+				"children": [],
+				"usePageVariable": true,
+				"name": "imgLine",
+				"parent": "inputField",
+				"flexProps": {
+					"alignSelf": "AUTO",
+					"positionType": "ABSOLUTE",
+					"right": 0,
+					"bottom": 0
+				},
+				"style": {
+					"backgroundColor": "rgba( 255, 255, 255, 0 )",
+					"opacity": 1,
+					"borderColor": "rgba(0,0,0,1)",
+					"borderWidth": 0,
+					"font": {}
+				},
+				"layout": {
+					"right": 0,
+					"bottom": 0,
+					"left": 0,
+					"height": 1
+				},
+				"flex": {
+					"alignSelf": 0,
+					"positionType": 1
+				},
+				"visibility": true,
+				"image": "input_active_line.png",
+				"imageFillType": "STRETCH"
+			}
+		}
+	]
+}

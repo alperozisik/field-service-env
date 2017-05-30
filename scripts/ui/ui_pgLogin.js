@@ -6,13 +6,18 @@
 
 const extend = require('js-base/core/extend');
 const Page = require('sf-core/ui/page');
-const FlexLayout = require('sf-core/ui/flexlayout');
-const ImageView = require('sf-core/ui/imageview');
 const Image = require('sf-core/ui/image');
 const ImageFillType = require('sf-core/ui/imagefilltype');
+const FlexLayout = require('sf-core/ui/flexlayout');
 const Color = require('sf-core/ui/color');
+const Font = require('sf-core/ui/font');
+const ImageView = require('sf-core/ui/imageview');
 const Label = require('sf-core/ui/label');
 
+const Imageview1 = require("../components/Imageview1");
+const Textbox1 = require("../components/Textbox1");
+const ImgLine = require("../components/ImgLine");
+const TbInput = require("../components/TbInput");
 const InputField = require("../components/InputField");
 
 const getCombinedStyle = require("library/styler-builder").getCombinedStyle;
@@ -25,6 +30,64 @@ const PgLogin_ = extend(Page)(
 			onShow: onShow.bind(this),
 			onLoad: onLoad.bind(this)
 		}, props || {}));
+
+		var imageview1 = new Imageview1(getCombinedStyle(".imageView", {
+			width: NaN,
+			height: 2,
+			left: 0,
+			image: Image.createFromFile("images://input_active_line.png"),
+			imageFillType: ImageFillType.STRETCH,
+			positionType: FlexLayout.PositionType.ABSOLUTE,
+			right: 0,
+			bottom: 0,
+			backgroundColor: Color.create(0, 255, 255, 255)
+		}), "pgLogin");
+		ifPassword.addChild(imageview1);
+		this.imageview1 = imageview1;
+
+		var textbox1 = new Textbox1(getCombinedStyle(".textBox", {
+			left: 0,
+			top: 0,
+			width: NaN,
+			height: NaN,
+			text: "Input",
+			right: 0,
+			bottom: 0,
+			positionType: FlexLayout.PositionType.ABSOLUTE,
+			backgroundColor: Color.create(0, 255, 255, 255),
+			font: Font.create("Arial", 32, Font.NORMAL)
+		}), "pgLogin");
+		ifPassword.addChild(textbox1);
+		this.textbox1 = textbox1;
+
+		var imgLine = new ImgLine(getCombinedStyle(".imageView", {
+			width: NaN,
+			height: 2,
+			left: 0,
+			image: Image.createFromFile("images://input_active_line.png"),
+			imageFillType: ImageFillType.STRETCH,
+			positionType: FlexLayout.PositionType.ABSOLUTE,
+			right: 0,
+			bottom: 0,
+			backgroundColor: Color.create(0, 255, 255, 255)
+		}), "pgLogin");
+		ifUsername.addChild(imgLine);
+		this.imgLine = imgLine;
+
+		var tbInput = new TbInput(getCombinedStyle(".textBox", {
+			left: 0,
+			top: 0,
+			width: NaN,
+			height: NaN,
+			text: "Input",
+			right: 0,
+			bottom: 0,
+			positionType: FlexLayout.PositionType.ABSOLUTE,
+			backgroundColor: Color.create(0, 255, 255, 255),
+			font: Font.create("Arial", 32, Font.NORMAL)
+		}), "pgLogin");
+		ifUsername.addChild(tbInput);
+		this.tbInput = tbInput;
 
 		var flLeft = new FlexLayout(getCombinedStyle(".flexLayout .flexLayout-layoutSide", {
 			height: NaN,
@@ -62,9 +125,16 @@ const PgLogin_ = extend(Page)(
 		})); 
 		flMiddle.addChild(flTexts);
 		
+		var flInputs = new FlexLayout(getCombinedStyle(".flexLayout", {
+			width: NaN,
+			height: 90,
+			justifyContent: FlexLayout.JustifyContent.SPACE_BETWEEN
+		})); 
+		flMiddle.addChild(flInputs);
+		
 		var inputField = new InputField(getCombinedStyle(".flexLayout", {
-			width: 375,
-			height: 60,
+			width: NaN,
+			height: 30,
 			name: "inputField",
 			visible: true,
 			alignSelf: FlexLayout.AlignSelf.AUTO,
@@ -75,17 +145,19 @@ const PgLogin_ = extend(Page)(
 			flexWrap: FlexLayout.FlexWrap.NOWRAP,
 			flexDirection: FlexLayout.FlexDirection.COLUMN,
 			positionType: FlexLayout.PositionType.RELATIVE,
-			right: 0,
+			right: NaN,
 			backgroundColor: Color.create(0, 255, 255, 255),
 			alpha: 1,
 			borderColor: Color.create(255, 0, 0, 0),
 			borderWidth: 0
 		}), "pgLogin");
-		flMiddle.addChild(inputField);
-		
-		var flexlayout4 = new InputField(getCombinedStyle(".flexLayout", {
-			width: 375,
-			height: 60,
+		flInputs.addChild(inputField);
+		this.inputField = inputField;
+
+		var inputField = new InputField(getCombinedStyle(".flexLayout", {
+			width: NaN,
+			height: 30,
+			name: "inputField",
 			visible: true,
 			alignSelf: FlexLayout.AlignSelf.AUTO,
 			direction: FlexLayout.Direction.INHERIT,
@@ -95,14 +167,15 @@ const PgLogin_ = extend(Page)(
 			flexWrap: FlexLayout.FlexWrap.NOWRAP,
 			flexDirection: FlexLayout.FlexDirection.COLUMN,
 			positionType: FlexLayout.PositionType.RELATIVE,
-			right: 0,
+			right: NaN,
 			backgroundColor: Color.create(0, 255, 255, 255),
 			alpha: 1,
 			borderColor: Color.create(255, 0, 0, 0),
 			borderWidth: 0
 		}), "pgLogin");
-		flMiddle.addChild(flexlayout4);
-		
+		flInputs.addChild(inputField);
+		this.inputField = inputField;
+
 		var lblTitle = new Label(getCombinedStyle(".label .label-title", {
 			width: NaN,
 			text: "Customer Services",
@@ -129,14 +202,19 @@ const PgLogin_ = extend(Page)(
 		flMiddle.children = Object.assign({}, {
 			ivLogo: ivLogo,
 			flTexts: flTexts,
-			inputField: inputField,
-			flexlayout4: flexlayout4
+			flInputs: flInputs
 		});
 		
 		//assign the children of flTexts
 		flTexts.children = Object.assign({}, {
 			lblTitle: lblTitle,
 			lblSubTitle: lblSubTitle
+		});
+		
+		//assign the children of flInputs
+		flInputs.children = Object.assign({}, {
+			ifUsername: ifUsername,
+			ifPassword: ifPassword
 		});
 		
 	});

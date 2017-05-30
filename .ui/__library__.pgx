@@ -6,7 +6,7 @@
 			"themeProps": {},
 			"userProps": {},
 			"className": ".page",
-			"version": "6.3.0-rc.2",
+			"version": "6.3.0-rc.4",
 			"props": {
 				"width": 187.5,
 				"height": 301.5,
@@ -96,10 +96,10 @@
 			},
 			"themeProps": {},
 			"userProps": {
-				"left": 0,
+				"left": 2,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"right": null,
 				"bottom": null,
 				"flexProps": {
@@ -115,12 +115,12 @@
 			},
 			"className": ".flexLayout",
 			"props": {
-				"left": 0,
+				"left": 2,
 				"top": 0,
 				"right": null,
 				"bottom": null,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"children": [
 					"tbInput",
 					"imgLine"
@@ -135,7 +135,7 @@
 					"justifyContent": "FLEX_START",
 					"flexWrap": "NOWRAP",
 					"flexDirection": "COLUMN",
-					"positionType": "ABSOLUTE",
+					"positionType": "RELATIVE",
 					"right": 0
 				},
 				"style": {
@@ -147,10 +147,9 @@
 				},
 				"layout": {
 					"right": 0,
-					"left": 0,
+					"left": 1,
 					"top": 0,
-					"width": 187.5,
-					"height": 30
+					"height": 15
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -160,7 +159,7 @@
 					"justifyContent": 0,
 					"flexWrap": 0,
 					"flexDirection": 0,
-					"positionType": 1
+					"positionType": 0
 				},
 				"visibility": true
 			}
@@ -175,8 +174,8 @@
 			"userProps": {
 				"left": 0,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"text": "Input",
 				"usePageVariable": true,
 				"flexProps": {
@@ -199,8 +198,8 @@
 			"props": {
 				"left": 0,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"children": [],
 				"usePageVariable": true,
 				"name": "tbInput",
@@ -231,8 +230,7 @@
 					"bottom": 0,
 					"left": 0,
 					"top": 0,
-					"width": 187.5,
-					"height": 30
+					"height": 15
 				},
 				"flex": {
 					"alignSelf": 0,

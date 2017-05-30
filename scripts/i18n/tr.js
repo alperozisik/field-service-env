@@ -13,5 +13,7 @@ SMF.i18n.defineLanguage('tr', {
 	"sureToDelete": "Silmek istediğinize emin misiniz?",
 	"networkError": "Bir ağ bağlantı hatası oluştu, lütfen daha sonra tekrar deneyiniz",
 	"applicationError": "Beklenmeyen Uygulama Hatası",
-	"delete": "Sil"
+	"delete": "Sil",
+	"userName": "Kullanıcı Adı",
+	"password": "Şifre"
 });

@@ -17,10 +17,10 @@
 				}
 			},
 			"className": ".page",
-			"version": "6.3.0-rc.2",
+			"version": "6.3.0-rc.4",
 			"props": {
-				"width": 375,
-				"height": 667,
+				"width": 187.5,
+				"height": 333.5,
 				"children": [
 					"statusBar",
 					"headerBar",
@@ -72,7 +72,7 @@
 				},
 				"isRemovable": false,
 				"layout": {
-					"height": 20
+					"height": 10
 				},
 				"flex": {},
 				"visibility": true,
@@ -101,7 +101,7 @@
 					"backgroundColor": "#FFFFFF"
 				},
 				"layout": {
-					"height": 44
+					"height": 22
 				},
 				"flex": {},
 				"visibility": false
@@ -203,8 +203,7 @@
 				"children": [
 					"ivLogo",
 					"flTexts",
-					"inputField",
-					"flexlayout4"
+					"flInputs"
 				],
 				"name": "flMiddle",
 				"parent": "pgLogin",
@@ -343,7 +342,7 @@
 					"font": {}
 				},
 				"layout": {
-					"height": 67.5
+					"height": 33.75
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -396,7 +395,7 @@
 					"font": {}
 				},
 				"layout": {
-					"height": 90
+					"height": 45
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -448,7 +447,7 @@
 					}
 				},
 				"layout": {
-					"height": 37
+					"height": 18.5
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -497,7 +496,7 @@
 					}
 				},
 				"layout": {
-					"height": 44
+					"height": 22
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -510,23 +509,80 @@
 		},
 		{
 			"type": "FlexLayout",
-			"id": "cfea079e",
+			"id": "bb75d549",
+			"themeProps": {},
+			"userProps": {
+				"width": null,
+				"height": 90,
+				"flexProps": {
+					"justifyContent": "SPACE_BETWEEN"
+				},
+				"flex": {
+					"justifyContent": 3
+				}
+			},
+			"className": ".flexLayout",
+			"props": {
+				"width": null,
+				"height": 90,
+				"children": [
+					"ifUsername",
+					"ifPassword"
+				],
+				"name": "flInputs",
+				"parent": "flMiddle",
+				"flexProps": {
+					"alignSelf": "AUTO",
+					"direction": "INHERIT",
+					"alignContent": "STRETCH",
+					"alignItems": "STRETCH",
+					"justifyContent": "SPACE_BETWEEN",
+					"flexWrap": "NOWRAP",
+					"flexDirection": "COLUMN",
+					"positionType": "RELATIVE"
+				},
+				"style": {
+					"backgroundColor": "rgba(0,0,0,0)",
+					"opacity": 1,
+					"borderColor": "rgba(0,0,0,1)",
+					"borderWidth": 0,
+					"font": {}
+				},
+				"layout": {
+					"height": 45
+				},
+				"flex": {
+					"alignSelf": 0,
+					"direction": 0,
+					"alignContent": 4,
+					"alignItems": 4,
+					"justifyContent": 3,
+					"flexWrap": 0,
+					"flexDirection": 0,
+					"positionType": 0
+				},
+				"visibility": true
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "50875c5d",
 			"source": {
 				"page": "__library__",
 				"id": "9184d859"
 			},
 			"themeProps": {},
 			"userProps": {
-				"left": 0,
-				"top": 0,
+				"left": null,
+				"top": null,
 				"right": null,
 				"bottom": null,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"name": "inputField",
-				"parent": "flMiddle",
+				"parent": "flInputs",
 				"visibility": true,
-				"touchEnabled": true,
+				"usePageVariable": true,
 				"children": [
 					"tbInput",
 					"imgLine"
@@ -540,7 +596,7 @@
 					"flexWrap": "NOWRAP",
 					"flexDirection": "COLUMN",
 					"positionType": "RELATIVE",
-					"right": 0
+					"right": null
 				},
 				"style": {
 					"backgroundColor": "rgba( 255, 255, 255, 0 )",
@@ -549,11 +605,11 @@
 					"borderWidth": 0
 				},
 				"layout": {
-					"right": null,
-					"left": null,
-					"top": null,
-					"width": null,
-					"height": null
+					"right": 0,
+					"left": 1,
+					"top": 0,
+					"width": 187.5,
+					"height": 15
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -568,18 +624,19 @@
 			},
 			"className": ".flexLayout",
 			"props": {
-				"left": 0,
-				"top": 0,
+				"left": null,
+				"top": null,
 				"right": null,
 				"bottom": null,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"children": [
 					"tbInput",
 					"imgLine"
 				],
+				"usePageVariable": true,
 				"name": "inputField",
-				"parent": "flMiddle",
+				"parent": "flInputs",
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"direction": "INHERIT",
@@ -589,7 +646,7 @@
 					"flexWrap": "NOWRAP",
 					"flexDirection": "COLUMN",
 					"positionType": "RELATIVE",
-					"right": 0
+					"right": null
 				},
 				"style": {
 					"backgroundColor": "rgba( 255, 255, 255, 0 )",
@@ -599,11 +656,7 @@
 					"font": {}
 				},
 				"layout": {
-					"right": 0,
-					"left": 0,
-					"top": 0,
-					"width": 375,
-					"height": 60
+					"height": 15
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -620,7 +673,7 @@
 		},
 		{
 			"type": "TextBox",
-			"id": "6b2ba494",
+			"id": "0266258b",
 			"source": {
 				"page": "__library__"
 			},
@@ -628,8 +681,8 @@
 			"userProps": {
 				"left": 0,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": null,
 				"text": "Input",
 				"usePageVariable": true,
 				"flexProps": {
@@ -652,12 +705,12 @@
 			"props": {
 				"left": 0,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": null,
 				"children": [],
 				"usePageVariable": true,
 				"name": "tbInput",
-				"parent": "inputField",
+				"parent": "ifUsername",
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"positionType": "ABSOLUTE",
@@ -680,12 +733,10 @@
 					}
 				},
 				"layout": {
-					"right": null,
-					"bottom": null,
-					"left": null,
-					"top": null,
-					"width": null,
-					"height": null
+					"right": 0,
+					"bottom": 0,
+					"left": 0,
+					"top": 0
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -697,7 +748,7 @@
 		},
 		{
 			"type": "ImageView",
-			"id": "1f898eb6",
+			"id": "28c2d527",
 			"source": {
 				"page": "__library__"
 			},
@@ -729,7 +780,7 @@
 				"children": [],
 				"usePageVariable": true,
 				"name": "imgLine",
-				"parent": "inputField",
+				"parent": "ifUsername",
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"positionType": "ABSOLUTE",
@@ -744,10 +795,10 @@
 					"font": {}
 				},
 				"layout": {
-					"right": null,
-					"bottom": null,
-					"left": null,
-					"height": null
+					"right": 0,
+					"bottom": 0,
+					"left": 0,
+					"height": 1
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -760,22 +811,23 @@
 		},
 		{
 			"type": "FlexLayout",
-			"id": "a9b9092f",
+			"id": "97b9c5af",
 			"source": {
 				"page": "__library__",
 				"id": "9184d859"
 			},
 			"themeProps": {},
 			"userProps": {
-				"left": 0,
-				"top": 0,
+				"left": null,
+				"top": null,
 				"right": null,
 				"bottom": null,
-				"width": 375,
-				"height": 60,
-				"parent": "flMiddle",
+				"width": null,
+				"height": 30,
+				"name": "inputField",
+				"parent": "flInputs",
 				"visibility": true,
-				"touchEnabled": true,
+				"usePageVariable": true,
 				"children": [
 					"tbInput",
 					"imgLine"
@@ -789,7 +841,7 @@
 					"flexWrap": "NOWRAP",
 					"flexDirection": "COLUMN",
 					"positionType": "RELATIVE",
-					"right": 0
+					"right": null
 				},
 				"style": {
 					"backgroundColor": "rgba( 255, 255, 255, 0 )",
@@ -798,11 +850,11 @@
 					"borderWidth": 0
 				},
 				"layout": {
-					"right": null,
-					"left": null,
-					"top": null,
-					"width": null,
-					"height": null
+					"right": 0,
+					"left": 1,
+					"top": 0,
+					"width": 187.5,
+					"height": 15
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -817,18 +869,19 @@
 			},
 			"className": ".flexLayout",
 			"props": {
-				"left": 0,
-				"top": 0,
+				"left": null,
+				"top": null,
 				"right": null,
 				"bottom": null,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": 30,
 				"children": [
-					"textbox2",
-					"imageview2"
+					"tbInput",
+					"imgLine"
 				],
-				"name": "flexlayout4",
-				"parent": "flMiddle",
+				"usePageVariable": true,
+				"name": "inputField",
+				"parent": "flInputs",
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"direction": "INHERIT",
@@ -838,7 +891,7 @@
 					"flexWrap": "NOWRAP",
 					"flexDirection": "COLUMN",
 					"positionType": "RELATIVE",
-					"right": 0
+					"right": null
 				},
 				"style": {
 					"backgroundColor": "rgba( 255, 255, 255, 0 )",
@@ -848,11 +901,7 @@
 					"font": {}
 				},
 				"layout": {
-					"right": 0,
-					"left": 0,
-					"top": 0,
-					"width": 375,
-					"height": 60
+					"height": 15
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -869,7 +918,7 @@
 		},
 		{
 			"type": "TextBox",
-			"id": "d80aa442",
+			"id": "0308dd53",
 			"source": {
 				"page": "__library__"
 			},
@@ -877,8 +926,8 @@
 			"userProps": {
 				"left": 0,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": null,
 				"text": "Input",
 				"usePageVariable": true,
 				"flexProps": {
@@ -901,12 +950,12 @@
 			"props": {
 				"left": 0,
 				"top": 0,
-				"width": 375,
-				"height": 60,
+				"width": null,
+				"height": null,
 				"children": [],
 				"usePageVariable": true,
-				"name": "textbox2",
-				"parent": "flexlayout4",
+				"name": "textbox1",
+				"parent": "ifPassword",
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"positionType": "ABSOLUTE",
@@ -929,12 +978,10 @@
 					}
 				},
 				"layout": {
-					"right": null,
-					"bottom": null,
-					"left": null,
-					"top": null,
-					"width": null,
-					"height": null
+					"right": 0,
+					"bottom": 0,
+					"left": 0,
+					"top": 0
 				},
 				"flex": {
 					"alignSelf": 0,
@@ -946,7 +993,7 @@
 		},
 		{
 			"type": "ImageView",
-			"id": "3a06d78c",
+			"id": "af7358a2",
 			"source": {
 				"page": "__library__"
 			},
@@ -977,8 +1024,8 @@
 				"height": 2,
 				"children": [],
 				"usePageVariable": true,
-				"name": "imageview2",
-				"parent": "flexlayout4",
+				"name": "imageview1",
+				"parent": "ifPassword",
 				"flexProps": {
 					"alignSelf": "AUTO",
 					"positionType": "ABSOLUTE",
@@ -993,10 +1040,10 @@
 					"font": {}
 				},
 				"layout": {
-					"right": null,
-					"bottom": null,
-					"left": null,
-					"height": null
+					"right": 0,
+					"bottom": 0,
+					"left": 0,
+					"height": 1
 				},
 				"flex": {
 					"alignSelf": 0,
